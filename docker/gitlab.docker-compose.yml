@@ -11,4 +11,4 @@ services:
       - GITLAB_TOKEN=${GITLAB_TOKEN}
       - GITLAB_USERNAME=${GITLAB_USERNAME}
     entrypoint: ["sh", "-c"]
-    command: ["sh awsRun.sh"]
+    command: ["sh gitlabRun.sh"]
