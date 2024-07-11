@@ -1,0 +1,3 @@
+variable "AWSRegion" {
+  type = string
+}
