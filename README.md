@@ -10,11 +10,10 @@ Second, when using `Terraform` you have to store its *state files* somewhere. A 
 
 A Linux or MacOS machine for local development. If you are running Windows, you first need to set up the *Windows Subsystem for Linux (WSL)* environment.
 
-You need `docker cli` and `docker-compose` on your machine for testing purposes, and/or on the machines that run your pipeline.
-You can check both of these by running the following commands:
+You need `docker cli` on your machine for testing purposes, and/or on the machines that run your pipeline.
+You can these by running the following command:
 ```sh
 docker --version
-docker-compose --version
 ```
 
 Depending on where you intend to store the `Terraform` *state files* you need the following:
@@ -127,7 +126,7 @@ for the `AWS` test.
 Whichever script you choose to run, the following happens:
 1) the first command builds the docker image and tags it as correspondingly
 2) the docker image copies the `Terraform` project and the *starting script* to an appropriate location. This is the place where the necessary environment variables are provided.
-3) the second command uses docker-compose to create and run the container. The container runs the *starting script* which only runs
+3) the second command uses docker compose to create and run the container. The container runs the *starting script* which only runs
 ```sh
 terraform init && terraform validate && terraform apply -auto-approve
 ```
